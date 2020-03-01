@@ -12,6 +12,12 @@ Blinky light(s) to get your attention when you have a pending notification while
 
 Uses [go-rpio](github.com/stianeikeland/go-rpio) to access GPIO on the Raspberry Pi.
 
+I wrote a `blink()` function to blink the LED as explained in this [Blinking LED on Raspberry Pi using Golang](https://www.admfactory.com/blinking-led-on-raspberry-pi-using-golang/) tutorial.
+
+I'm trying to use a channel with an empty struct to signal the `blink()` function
+when to stop as explained in [Starting and stopping things with a signal channel](https://medium.com/@matryer/golang-advent-calendar-day-two-starting-and-stopping-things-with-a-signal-channel-f5048161018)
+blog post.
+
 ## Github
 
 Looking at using the [Go Github Webhook](https://groob.io/tutorial/go-github-webhook/)
