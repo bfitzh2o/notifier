@@ -1,4 +1,5 @@
-# notifier
+# notifier [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg)](https://godoc.org/github.com/bfitzh2o/notifier/aws) [![CircleCI](https://circleci.com/gh/bfitzh2o/notifier.svg?style=shield)](https://circleci.com/gh/bfitzh2o/notifier) [![Go Report Card](https://goreportcard.com/badge/github.com/bfitzh2o/notifier)](https://goreportcard.com/report/github.com/bfitzh2o/notifier)
+
 Blinky light(s) to get your attention when you have a pending notification while you are head down coding
 
 ## Hardware

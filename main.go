@@ -42,4 +42,10 @@ func main() {
 	fmt.Println("Stopping")
 	close(stop)
 	fmt.Println("Stopped")
+	time.Sleep(5 * time.Second)
+	stop = make(chan struct{})
+	go blink(stop)
+	time.Sleep(10 * time.Second)
+	close(stop)
+	time.Sleep(2 * time.Second)
 }

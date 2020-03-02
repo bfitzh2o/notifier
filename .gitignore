@@ -5,6 +5,7 @@
 *.so
 *.dylib
 notifier
+release/
 
 # Test binary, built with `go test -c`
 *.test
