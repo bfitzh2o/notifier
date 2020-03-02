@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  lint_notifier:
+    docker:
+      - image: circleci/golang:latest
+    steps:
+      - checkout
+      - run:
+          name: Lint Golang code
+          command: make lint
+  test_notifier:
+    docker:
+      - image: circleci/golang:latest
+    steps:
+      - checkout
+      - run:
+          name: Run Unit Tests
+          command: make test
+  release_notifier:
+    docker:
+      - image: circleci/golang:latest
+    steps:
+      - checkout
+      - run:
+          name: Release notifier for Raspberry Pi
+          command: make release
+workflows:
+  version: 2
+  build:
+    jobs:
+      - lint_notifier
+      - test_notifier
+      - release_notifier:
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only: master
